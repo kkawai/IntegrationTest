@@ -44,8 +44,8 @@ jobs:
 
       # Run Tests Build
       #- name: Run gradle tests
-      - name: Run gradle connectedDebugAndroidTest
-        run: ./gradlew test
+      - name: Run gradle tests
+        run: ./gradlew connectedDebugAndroidTest
 
       # Run Build Project
       #- name: Build gradle project
