@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("wtf.emulator.gradle") version("0.17.0") apply(true)
 }
 
 android {

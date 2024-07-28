@@ -21,9 +21,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://maven.emulator.wtf/releases/") {
-            content { includeGroup("wtf.emulator") }
-        }
     }
 }
 

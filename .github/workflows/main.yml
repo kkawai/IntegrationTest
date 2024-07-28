@@ -44,8 +44,13 @@ jobs:
 
       # Run Tests Build
       #- name: Run gradle tests
-      - name: Run gradle tests
+      - name: Run connected tests
         run: ./gradlew connectedDebugAndroidTest
+        uses: "emulator-wtf/run-tests@v0"
+        with:
+          api-token: ${{ secrets.EW_API_TOKEN }}
+          test: app/build/outputs/apk/androidTest/app-debug-androidTest.apk
+          outputs-dir: build/test-results
 
       # Run Build Project
       - name: Build gradle project
