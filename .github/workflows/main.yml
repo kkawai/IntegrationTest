@@ -45,7 +45,7 @@ jobs:
       # Run Tests Build
       #- name: Run gradle tests
       - name: Build app
-        run: ./gradlew assembleDebug connectedDebugAndroidTest
+        run: ./gradlew assembleDebug assembleAndroidTest
       - name: Run tests
         uses: emulator-wtf/run-tests@v0
         with:
