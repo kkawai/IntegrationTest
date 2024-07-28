@@ -21,6 +21,6 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.integrationtest", appContext.packageName)
 
-        assertFalse(ConnectionUtils.isOnline(appContext))
+        assertTrue(ConnectionUtils.isOnline(appContext))
     }
 }
