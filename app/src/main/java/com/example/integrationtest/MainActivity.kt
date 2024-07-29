@@ -11,10 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.integrationtest.ui.theme.IntegrationTestTheme
+import com.example.mylibrary.SampleLibrary
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        SampleLibrary().someLibraryMethod()
+
         setContent {
             IntegrationTestTheme {
                 // A surface container using the 'background' color from the theme
