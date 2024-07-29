@@ -48,17 +48,17 @@ jobs:
         uses: emulator-wtf/run-tests@v0
         with:
           api-token: ${{ secrets.EW_API_TOKEN }}
-          aar: app/build/outputs/apk/debug/app-debug.apk
+          app: app/build/outputs/apk/debug/app-debug.apk
           test: app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
           outputs-dir: build/test-results
 
       - name: Build Instrumented Android Test for mylibrary
-        run: ./gradlew mylibrary:assembleDebug mylibrary:assembleDebugAndroidTest
+        run: ./gradlew assembleDebug mylibrary:assembleDebugAndroidTest
       - name: Run Connected Emulator Android Tests for mylibrary
         uses: emulator-wtf/run-tests@v0
         with:
           api-token: ${{ secrets.EW_API_TOKEN }}
-          app: mylibrary/build/outputs/aar/mylibrary-debug.aar
+          app: app/build/outputs/apk/debug/app-debug.apk
           test: mylibrary/build/outputs/apk/androidTest/debug/mylibrary-debug-androidTest.apk
           outputs-dir: build/test-results
 
